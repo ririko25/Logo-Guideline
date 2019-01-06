@@ -8,9 +8,11 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "generate": "nuxt generate",
+    "md":"processmd contents/posts/**/*.md --outputDir contents/posts/json --markdownOptions '{\"html\":true}'",
+    "md:watch": "npm run md -- --watch"
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
@@ -20,14 +22,14 @@
     "sass-loader": "^7.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.1",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "nodemon": "^1.11.0",
+    "processmd": "^4.4.0"
   },
-
   "config": {
     "nuxt": {
       "host": "0.0.0.0"
