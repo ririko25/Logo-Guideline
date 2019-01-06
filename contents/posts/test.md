@@ -62,7 +62,7 @@ created_at: 2018-01-01
  ## ロゴマークのダウンロード
   ロゴマークのダウンロードが行えます。
 
-<a href="logo.gif" download="logo_chatbox">ダウンロード</a>(png,ai)
+<a href="logo_chatbox.zip" download="logo_chatbox">ダウンロード</a>(png,ai)
 
 
 
