@@ -1,40 +1,56 @@
+const pkg = require('./package');
+
 module.exports = {
+  mode: 'spa',
+
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title: 'logo-guideline',
+    title: pkg.name,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      {charset: 'UTF-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {hid: 'description', name: 'description', content: pkg.description},
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css',
+        integrity:
+          'sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP',
+        crossorigin: 'anonymous',
+      },
+    ],
   },
+
   /*
-  ** Customize the progress bar color
-  */
-  loading: { color: '#3B8070' },
+   ** Global CSS
+   */
+  css: ['~/assets/scss/common.scss'],
+
   /*
-  ** Build configuration
-  */
+   ** Plugins to load before mounting the App
+   */
+  plugins: [],
+
+  /*
+   ** Build configuration
+   */
   build: {
     /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
+     ** Run ESLint on save
+     */
+    extend(config, {isDev, isClient}) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+          exclude: /(node_modules)/,
+        });
       }
-    }
+    },
   },
-  mode:"spa",
-}
-
+};
