@@ -1,7 +1,7 @@
 <template>
   <div class="l-footer">
     <div class="container">
-      <a class="enactment">制定:2019.01.01</a>
+      <a class="enactment">logo-guidline</a>
     </div>
   </div>
 </template>
